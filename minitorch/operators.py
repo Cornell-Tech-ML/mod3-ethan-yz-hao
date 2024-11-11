@@ -75,7 +75,10 @@ def is_close(x: float, y: float) -> bool:
 
 def sigmoid(x: float) -> float:
     """Return the sigmoid of x."""
-    return 1.0 / (1.0 + math.exp(-x)) if x >= 0 else math.exp(x) / (1.0 + math.exp(x))
+    if x >= 0:
+        return 1.0 / (1.0 + math.exp(-x))
+    else:
+        return math.exp(x) / (1.0 + math.exp(x))
 
 
 def relu(x: float) -> float:
@@ -132,36 +135,26 @@ def relu_back(x: float, d: float) -> float:
 # TODO: Implement for Task 0.3.
 def map(fn: Callable[[float], float]) -> Callable[[Iterable[float]], Iterable[float]]:
     """Implement a higher-order map function."""
-
-    def map_fc(array: Iterable[float]) -> Iterable[float]:
-        return [fn(x) for x in array]
-
-    return map_fc
+    return lambda ls: (fn(x) for x in ls)
 
 
 def zipWith(
     fn: Callable[[float, float], float],
 ) -> Callable[[Iterable[float], Iterable[float]], Iterable[float]]:
     """Implement a higher-order zipWith function."""
-
-    def zipWith_fc(array1: Iterable[float], array2: Iterable[float]) -> Iterable[float]:
-        return [fn(x, y) for x, y in zip(array1, array2)]
-
-    return zipWith_fc
+    return lambda ls1, ls2: (fn(x, y) for x, y in zip(ls1, ls2))
 
 
 def reduce(
     fn: Callable[[float, float], float], init: float
 ) -> Callable[[Iterable[float]], float]:
     """Implement a higher-order reduce function."""
-
-    def reduce_fc(array: Iterable[float]) -> float:
-        t = init
-        for x in array:
-            t = fn(t, x)
-        return t
-
-    return reduce_fc
+    def _reduce(ls: Iterable[float]) -> float:
+        acc = init
+        for x in ls:
+            acc = fn(acc, x)
+        return acc
+    return _reduce
 
 
 def negList(arr: Iterable[float]) -> Iterable[float]:

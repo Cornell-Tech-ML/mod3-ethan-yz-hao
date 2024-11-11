@@ -52,13 +52,13 @@ class Module:
 
         """
         # TODO: Implement for Task 0.4.
-        result: List[Tuple[str, Parameter]] = []
+        parameters: List[Tuple[str, Parameter]] = []
         for para_name, para in self._parameters.items():
-            result.append((para_name, para))
+            parameters.append((para_name, para))
         for module_name, module in self._modules.items():
             for para_name, para in module.named_parameters():
-                result.append((module_name + "." + para_name, para))
-        return result
+                parameters.append((module_name + "." + para_name, para))
+        return parameters
 
     def parameters(self) -> Sequence[Parameter]:
         """Enumerate over all the parameters of this module and its descendents."""
