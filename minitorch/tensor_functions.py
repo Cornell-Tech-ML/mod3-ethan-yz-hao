@@ -236,8 +236,7 @@ class Sigmoid(Function):
     def backward(ctx: Context, grad_output: Tensor) -> Tensor:
         r"""Backward for the sigmoid function, $f'(x) = \sigma(x) * (1 - \sigma(x))$"""
         (sig,) = ctx.saved_values
-        one = tensor(1.0, backend=grad_output.backend)
-        one_minus_sig = one - sig
+        one_minus_sig = -sig + 1.0
         sig_derivative = sig.f.mul_zip(sig, one_minus_sig)
         return grad_output.f.mul_zip(grad_output, sig_derivative)
 
