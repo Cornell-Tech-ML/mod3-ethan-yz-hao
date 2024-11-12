@@ -110,20 +110,18 @@ def backpropagate(variable: Variable, deriv: Any) -> None:
 
     """
     # TODO: Implement for Task 1.4.
-    order: Iterable[Variable] = topological_sort(variable)
-    d: Dict[int, Any] = {variable.unique_id: deriv}
-    for var in order:
-        current_d = d.get(var.unique_id, 0.0)
+    queue = topological_sort(variable)
+    derivatives: Dict[int, Any] = {}
+    derivatives[variable.unique_id] = deriv
+    for var in queue:
+        deriv = derivatives[var.unique_id]
         if var.is_leaf():
-            var.accumulate_derivative(current_d)
+            var.accumulate_derivative(deriv)
         else:
-            for parent, parent_d in var.chain_rule(current_d):
-                if parent.is_constant():
+            for v, d in var.chain_rule(deriv):
+                if v.is_constant():
                     continue
-                if parent.unique_id in d:
-                    d[parent.unique_id] += parent_d
-                else:
-                    d[parent.unique_id] = parent_d
+                derivatives[v.unique_id] = derivatives.get(v.unique_id, 0.0) + d
 
 
 @dataclass
