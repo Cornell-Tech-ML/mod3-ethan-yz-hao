@@ -34,7 +34,7 @@ The files that will be synced are:
 ## Parallel Analytics for Task 3.1 and 3.2
 ```
 MAP
- 
+
 ================================================================================
  Parallel Accelerator Optimizing:  Function tensor_map.<locals>._map,
 C:\Users\ASUS\Documents\Project\mini-torch\mod3-ethan-yz-
@@ -96,7 +96,7 @@ hao\minitorch\fast_ops.py (178) is hoisted out of the parallel loop labelled #1
     - numpy.empty() is used for the allocation.
 None
 ZIP
- 
+
 ================================================================================
  Parallel Accelerator Optimizing:  Function tensor_zip.<locals>._zip,
 C:\Users\ASUS\Documents\Project\mini-torch\mod3-ethan-yz-
@@ -171,7 +171,7 @@ hao\minitorch\fast_ops.py (234) is hoisted out of the parallel loop labelled #3
     - numpy.empty() is used for the allocation.
 None
 REDUCE
- 
+
 ================================================================================
  Parallel Accelerator Optimizing:  Function tensor_reduce.<locals>._reduce,
 C:\Users\ASUS\Documents\Project\mini-torch\mod3-ethan-yz-
@@ -228,7 +228,7 @@ hao\minitorch\fast_ops.py (283) is hoisted out of the parallel loop labelled #4
     - numpy.empty() is used for the allocation.
 None
 MATRIX MULTIPLY
- 
+
 ================================================================================
  Parallel Accelerator Optimizing:  Function _tensor_matrix_multiply,
 C:\Users\ASUS\Documents\Project\mini-torch\mod3-ethan-yz-

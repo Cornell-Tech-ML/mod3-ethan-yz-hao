@@ -30,6 +30,7 @@ Fn = TypeVar("Fn")
 
 
 def njit(fn: Fn, **kwargs: Any) -> Fn:
+    """JIT compile a function."""
     return _njit(inline="always", **kwargs)(fn)  # type: ignore
 
 
@@ -179,10 +180,10 @@ def tensor_map(
 
                 to_index(i, out_shape, out_i)
                 broadcast_index(out_i, out_shape, in_shape, in_i)
-                
+
                 out_pos = index_to_position(out_i, out_strides)
                 in_pos = index_to_position(in_i, in_strides)
-                
+
                 out[out_pos] = fn(in_storage[in_pos])
 
     return njit(_map, parallel=True)  # type: ignore
@@ -223,7 +224,9 @@ def tensor_zip(
         b_strides: Strides,
     ) -> None:
         # TODO: Implement for Task 3.1.
-        if list(a_strides) == list(b_strides) == list(out_strides) and list(a_shape) == list(b_shape) == list(out_shape):
+        if list(a_strides) == list(b_strides) == list(out_strides) and list(
+            a_shape
+        ) == list(b_shape) == list(out_shape):
             for i in prange(len(out)):
                 out[i] = fn(a_storage[i], b_storage[i])
 
@@ -283,7 +286,7 @@ def tensor_reduce(
             out_i = np.empty(MAX_DIMS, np.int32)
 
             to_index(i, out_shape, out_i)
-            
+
             out_pos = index_to_position(out_i, out_strides)
             a_pos = index_to_position(out_i, a_strides)
 
@@ -359,7 +362,11 @@ def _tensor_matrix_multiply(
                     row_s += row_a
                     col_s += col_b
 
-                out[row_i * out_strides[0] + col_j * out_strides[1] + block_k * out_strides[2]] = temp
+                out[
+                    row_i * out_strides[0]
+                    + col_j * out_strides[1]
+                    + block_k * out_strides[2]
+                ] = temp
 
 
 tensor_matrix_multiply = njit(_tensor_matrix_multiply, parallel=True)

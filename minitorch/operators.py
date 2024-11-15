@@ -149,11 +149,13 @@ def reduce(
     fn: Callable[[float, float], float], init: float
 ) -> Callable[[Iterable[float]], float]:
     """Implement a higher-order reduce function."""
+
     def _reduce(ls: Iterable[float]) -> float:
         acc = init
         for x in ls:
             acc = fn(acc, x)
         return acc
+
     return _reduce
 
 
