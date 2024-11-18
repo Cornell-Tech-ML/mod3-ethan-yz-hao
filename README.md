@@ -320,6 +320,12 @@ No allocation hoisting found
 None
 ```
 
+## Performance Comparison for Task 3.4
+
+The graph outlines the performance of the matrix multiplication on different sizes of matrices between the Fast Tensor Backend and the GPU Backend.
+
+![matmul_comparison](.readme/matmul_comparison.png)
+
 ## Training Result on Small Model for Task 3.5
 
 ### Split Dataset
