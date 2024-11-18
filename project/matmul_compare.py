@@ -11,6 +11,7 @@ GPUBackend = minitorch.TensorBackend(minitorch.CudaOps)
 
 
 def run_matmul(backend, size=16) -> None:
+    """Run a matrix multiplication with the given backend."""
     batch_size = 2
 
     x = minitorch.rand((batch_size, size, size), backend=backend)
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     plt.figure(figsize=(10, 6))
     plt.plot(sizes, [times[s]["fast"] for s in sizes], 'o-', label='Fast Tensor')
     plt.plot(sizes, [times[s]["gpu"] for s in sizes], 'o-', label='GPU Tensor')
-    
+
     plt.xlabel('Matrix Size')
     plt.ylabel('Time (seconds)')
     plt.title('Matrix Multiplication Performance Comparison')
