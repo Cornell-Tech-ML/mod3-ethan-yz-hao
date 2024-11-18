@@ -328,6 +328,8 @@ The graph outlines the performance of the matrix multiplication on different siz
 
 ## Training Result on Small Model for Task 3.5
 
+I've treaked `run_fast_tensor.py` to display time per epoch in the console. For CPU Backend, results from the GUI is also reported.
+
 ### Split Dataset
 
 GPU Backend, Hidden Size = 100, Rate = 0.05, Epoch = 500
@@ -438,6 +440,73 @@ Epoch  460  loss  0.1824036231310875 correct 50 time per epoch 0.078368878364563
 Epoch  470  loss  0.7377232868190247 correct 50 time per epoch 0.07545928955078125
 Epoch  480  loss  0.14667710690987723 correct 50 time per epoch 0.07451150417327881
 Epoch  490  loss  0.31828308716527115 correct 50 time per epoch 0.07465958595275879
+```
+
+GUI (CPU Backend), Hidden Size = 100, Rate = 0.05, Epoch = 500
+
+Time per epoch: 0.116s
+
+Final Image
+
+![Split Dataset](./.readme/split_dataset.png)
+
+Loss Curve
+
+![Loss Curve](./.readme/split_loss.png)
+
+Training Log
+```bash
+Epoch: 0/500, loss: 0, correct: 0
+Epoch: 0/500, loss: 4.985971430678876, correct: 44
+Epoch: 10/500, loss: 2.047982509821349, correct: 50
+Epoch: 20/500, loss: 2.1563895852267647, correct: 49
+Epoch: 30/500, loss: 0.5468046693253003, correct: 50
+Epoch: 40/500, loss: 0.6765360785726257, correct: 50
+Epoch: 50/500, loss: 0.7398994789102429, correct: 50
+Epoch: 60/500, loss: 0.19805121191290348, correct: 50
+Epoch: 70/500, loss: 0.6414649058277226, correct: 50
+Epoch: 80/500, loss: 0.6257569381880081, correct: 50
+Epoch: 90/500, loss: 0.7987020171279609, correct: 50
+Epoch: 100/500, loss: 0.2342661545713632, correct: 50
+Epoch: 110/500, loss: 0.07558068843285866, correct: 50
+Epoch: 120/500, loss: 0.2517685681891827, correct: 50
+Epoch: 130/500, loss: 0.6096598376027679, correct: 50
+Epoch: 140/500, loss: 0.038751272256605754, correct: 50
+Epoch: 150/500, loss: 0.4341883074141569, correct: 50
+Epoch: 160/500, loss: 0.056583478242994936, correct: 50
+Epoch: 170/500, loss: 0.1613730640258051, correct: 50
+Epoch: 180/500, loss: 0.032036792447294356, correct: 50
+Epoch: 190/500, loss: 0.2350226250652563, correct: 50
+Epoch: 200/500, loss: 0.8057613339806269, correct: 50
+Epoch: 210/500, loss: 0.5627344858328813, correct: 50
+Epoch: 220/500, loss: 0.20518960894349264, correct: 50
+Epoch: 230/500, loss: 0.4866246163546199, correct: 50
+Epoch: 240/500, loss: 0.488674073704416, correct: 50
+Epoch: 250/500, loss: 0.003577633516759103, correct: 50
+Epoch: 260/500, loss: 0.024388457535265935, correct: 50
+Epoch: 270/500, loss: 0.009561582918703687, correct: 50
+Epoch: 280/500, loss: 0.2233512985435334, correct: 50
+Epoch: 290/500, loss: 0.49847411560982435, correct: 50
+Epoch: 300/500, loss: 0.18452341197155012, correct: 50
+Epoch: 310/500, loss: 0.4210331785758339, correct: 50
+Epoch: 320/500, loss: 0.6036303339799607, correct: 50
+Epoch: 330/500, loss: 0.5346858835114493, correct: 50
+Epoch: 340/500, loss: 0.48303032481218416, correct: 50
+Epoch: 350/500, loss: 0.005199636079930813, correct: 50
+Epoch: 360/500, loss: 0.16186263245556876, correct: 50
+Epoch: 370/500, loss: 0.003907004449128594, correct: 50
+Epoch: 380/500, loss: 0.0011457309725663816, correct: 50
+Epoch: 390/500, loss: 0.008010173946975658, correct: 50
+Epoch: 400/500, loss: 0.24143621321776843, correct: 50
+Epoch: 410/500, loss: 0.11719367373141157, correct: 50
+Epoch: 420/500, loss: 0.001115102241467843, correct: 50
+Epoch: 430/500, loss: 0.0003860902837268111, correct: 50
+Epoch: 440/500, loss: 0.0699355011871127, correct: 50
+Epoch: 450/500, loss: 0.0013216500255875429, correct: 50
+Epoch: 460/500, loss: 0.03173241627236897, correct: 50
+Epoch: 470/500, loss: 0.08405365741041812, correct: 50
+Epoch: 480/500, loss: 0.15325265630080073, correct: 50
+Epoch: 490/500, loss: 0.03046679433399148, correct: 50
 ```
 
 ### XOR Dataset
@@ -552,6 +621,72 @@ Epoch  480  loss  2.5062404206817512 correct 45 time per epoch 0.078716635704040
 Epoch  490  loss  0.13699335999799075 correct 48 time per epoch 0.0774106502532959
 ```
 
+GUI (CPU Backend), Hidden Size = 100, Rate = 0.05, Epoch = 500
+
+Time per epoch: 0.107s
+
+Final Image
+
+![XOR Dataset](./.readme/xor_dataset.png)
+
+Loss Curve
+
+![Loss Curve](./.readme/xor_loss.png)
+
+Training Log
+```bash
+Epoch: 0/500, loss: 5.985244366168441, correct: 40
+Epoch: 10/500, loss: 3.389315756098539, correct: 41
+Epoch: 20/500, loss: 3.7850228458757327, correct: 46
+Epoch: 30/500, loss: 2.025498635988576, correct: 46
+Epoch: 40/500, loss: 1.0739055779892235, correct: 47
+Epoch: 50/500, loss: 3.5559642249739722, correct: 47
+Epoch: 60/500, loss: 2.221363254629143, correct: 46
+Epoch: 70/500, loss: 3.249413339772614, correct: 47
+Epoch: 80/500, loss: 1.748263224064907, correct: 47
+Epoch: 90/500, loss: 1.7921320656952755, correct: 47
+Epoch: 100/500, loss: 0.769755189629757, correct: 47
+Epoch: 110/500, loss: 1.347720018705213, correct: 47
+Epoch: 120/500, loss: 1.6216708041485162, correct: 48
+Epoch: 130/500, loss: 1.49228087545834, correct: 47
+Epoch: 140/500, loss: 2.1088368498862393, correct: 47
+Epoch: 150/500, loss: 1.9467678485479993, correct: 48
+Epoch: 160/500, loss: 0.6282653050045509, correct: 48
+Epoch: 170/500, loss: 1.459554305956555, correct: 48
+Epoch: 180/500, loss: 1.3303682077414958, correct: 48
+Epoch: 190/500, loss: 1.572091565673823, correct: 49
+Epoch: 200/500, loss: 0.6648016451561466, correct: 48
+Epoch: 210/500, loss: 2.2248428460322724, correct: 48
+Epoch: 220/500, loss: 0.17483924072356308, correct: 48
+Epoch: 230/500, loss: 1.0504129532518163, correct: 49
+Epoch: 240/500, loss: 1.3308242945559265, correct: 50
+Epoch: 250/500, loss: 0.6224597465513909, correct: 50
+Epoch: 260/500, loss: 1.3343238952579004, correct: 50
+Epoch: 270/500, loss: 0.4310926316713035, correct: 50
+Epoch: 280/500, loss: 1.5749449753198237, correct: 49
+Epoch: 290/500, loss: 0.7972422286715648, correct: 49
+Epoch: 300/500, loss: 0.5423716215740658, correct: 48
+Epoch: 310/500, loss: 1.2184294729022516, correct: 50
+Epoch: 320/500, loss: 1.821222958138881, correct: 49
+Epoch: 330/500, loss: 0.1812008416342567, correct: 50
+Epoch: 340/500, loss: 0.6662900871792016, correct: 50
+Epoch: 350/500, loss: 1.1453734020146453, correct: 50
+Epoch: 360/500, loss: 0.5529199112400498, correct: 50
+Epoch: 370/500, loss: 0.7417698589341014, correct: 50
+Epoch: 380/500, loss: 1.7146680093039297, correct: 50
+Epoch: 390/500, loss: 0.36514974374116466, correct: 50
+Epoch: 400/500, loss: 1.2810115826448127, correct: 50
+Epoch: 410/500, loss: 0.7260979564507752, correct: 50
+Epoch: 420/500, loss: 0.6134774055459665, correct: 50
+Epoch: 430/500, loss: 0.07133103335160702, correct: 50
+Epoch: 440/500, loss: 0.8609198925154314, correct: 50
+Epoch: 450/500, loss: 0.4649432705092511, correct: 50
+Epoch: 460/500, loss: 0.8429380710823914, correct: 50
+Epoch: 470/500, loss: 0.034045084937111884, correct: 50
+Epoch: 480/500, loss: 0.3069508115785015, correct: 50
+Epoch: 490/500, loss: 0.18440171669377736, correct: 50
+```
+
 ### Simple Dataset
 
 GPU Backend, Hidden Size = 100, Rate = 0.05, Epoch = 500
@@ -664,6 +799,74 @@ Epoch  480  loss  0.013113550818402667 correct 50 time per epoch 0.0849637985229
 Epoch  490  loss  0.029875112523107386 correct 50 time per epoch 0.08171195983886718
 ```
 
+GUI (CPU Backend), Hidden Size = 100, Rate = 0.05, Epoch = 500
+
+Time per epoch: 0.113s
+
+Final Image
+
+![Simple Dataset](./.readme/simple_dataset.png)
+
+Loss Curve
+
+![Loss Curve](./.readme/simple_loss.png)
+
+Training Log
+```bash
+Epoch: 0/500, loss: 0, correct: 0
+Epoch: 0/500, loss: 4.985971430678876, correct: 44
+Epoch: 10/500, loss: 2.047982509821349, correct: 50
+Epoch: 20/500, loss: 2.1563895852267647, correct: 49
+Epoch: 30/500, loss: 0.5468046693253003, correct: 50
+Epoch: 40/500, loss: 0.6765360785726257, correct: 50
+Epoch: 50/500, loss: 0.7398994789102429, correct: 50
+Epoch: 60/500, loss: 0.19805121191290348, correct: 50
+Epoch: 70/500, loss: 0.6414649058277226, correct: 50
+Epoch: 80/500, loss: 0.6257569381880081, correct: 50
+Epoch: 90/500, loss: 0.7987020171279609, correct: 50
+Epoch: 100/500, loss: 0.2342661545713632, correct: 50
+Epoch: 110/500, loss: 0.07558068843285866, correct: 50
+Epoch: 120/500, loss: 0.2517685681891827, correct: 50
+Epoch: 130/500, loss: 0.6096598376027679, correct: 50
+Epoch: 140/500, loss: 0.038751272256605754, correct: 50
+Epoch: 150/500, loss: 0.4341883074141569, correct: 50
+Epoch: 160/500, loss: 0.056583478242994936, correct: 50
+Epoch: 170/500, loss: 0.1613730640258051, correct: 50
+Epoch: 180/500, loss: 0.032036792447294356, correct: 50
+Epoch: 190/500, loss: 0.2350226250652563, correct: 50
+Epoch: 200/500, loss: 0.8057613339806269, correct: 50
+Epoch: 210/500, loss: 0.5627344858328813, correct: 50
+Epoch: 220/500, loss: 0.20518960894349264, correct: 50
+Epoch: 230/500, loss: 0.4866246163546199, correct: 50
+Epoch: 240/500, loss: 0.488674073704416, correct: 50
+Epoch: 250/500, loss: 0.003577633516759103, correct: 50
+Epoch: 260/500, loss: 0.024388457535265935, correct: 50
+Epoch: 270/500, loss: 0.009561582918703687, correct: 50
+Epoch: 280/500, loss: 0.2233512985435334, correct: 50
+Epoch: 290/500, loss: 0.49847411560982435, correct: 50
+Epoch: 300/500, loss: 0.18452341197155012, correct: 50
+Epoch: 310/500, loss: 0.4210331785758339, correct: 50
+Epoch: 320/500, loss: 0.6036303339799607, correct: 50
+Epoch: 330/500, loss: 0.5346858835114493, correct: 50
+Epoch: 340/500, loss: 0.48303032481218416, correct: 50
+Epoch: 350/500, loss: 0.005199636079930813, correct: 50
+Epoch: 360/500, loss: 0.16186263245556876, correct: 50
+Epoch: 370/500, loss: 0.003907004449128594, correct: 50
+Epoch: 380/500, loss: 0.0011457309725663816, correct: 50
+Epoch: 390/500, loss: 0.008010173946975658, correct: 50
+Epoch: 400/500, loss: 0.24143621321776843, correct: 50
+Epoch: 410/500, loss: 0.11719367373141157, correct: 50
+Epoch: 420/500, loss: 0.001115102241467843, correct: 50
+Epoch: 430/500, loss: 0.0003860902837268111, correct: 50
+Epoch: 440/500, loss: 0.0699355011871127, correct: 50
+Epoch: 450/500, loss: 0.0013216500255875429, correct: 50
+Epoch: 460/500, loss: 0.03173241627236897, correct: 50
+Epoch: 470/500, loss: 0.08405365741041812, correct: 50
+Epoch: 480/500, loss: 0.15325265630080073, correct: 50
+Epoch: 490/500, loss: 0.03046679433399148, correct: 50
+```
+
+
 ## Training Result on Big Model for Task 3.5
 
 ### Split Dataset
@@ -718,6 +921,42 @@ Epoch  180  loss  0.657062521654133 correct 50 time per epoch 0.2675886869430542
 Epoch  190  loss  0.7233538146201086 correct 50 time per epoch 0.26750199794769286
 ```
 
+GUI (CPU Backend), Hidden Size = 200 (GUI only allows up to 200), Rate = 0.05, Epoch = 200
+
+Time per epoch: 0.205s
+
+Final Image
+
+![Split Dataset](./.readme/split_dataset_large.png)
+
+Loss Curve
+
+![Loss Curve](./.readme/split_loss_large.png)
+
+Training Log
+```bash
+Epoch: 0/200, loss: 6.544878161296078, correct: 27
+Epoch: 10/200, loss: 5.529238010922219, correct: 41
+Epoch: 20/200, loss: 2.8922146092919743, correct: 40
+Epoch: 30/200, loss: 3.397910832267283, correct: 49
+Epoch: 40/200, loss: 2.121302120108828, correct: 50
+Epoch: 50/200, loss: 1.3865394871987413, correct: 50
+Epoch: 60/200, loss: 1.9952448248730645, correct: 50
+Epoch: 70/200, loss: 0.4993602856894355, correct: 50
+Epoch: 80/200, loss: 1.58354746837309, correct: 47
+Epoch: 90/200, loss: 1.440777237259962, correct: 50
+Epoch: 100/200, loss: 1.0951101405270105, correct: 50
+Epoch: 110/200, loss: 0.4741237259236539, correct: 49
+Epoch: 120/200, loss: 1.1167803843998472, correct: 50
+Epoch: 130/200, loss: 0.714990650957233, correct: 50
+Epoch: 140/200, loss: 0.8014005764222771, correct: 50
+Epoch: 150/200, loss: 0.6891101174754128, correct: 50
+Epoch: 160/200, loss: 0.3461954473861568, correct: 50
+Epoch: 170/200, loss: 0.2619808337399311, correct: 50
+Epoch: 180/200, loss: 0.4843508875246547, correct: 50
+Epoch: 190/200, loss: 0.6770062507436799, correct: 50
+```
+
 ### XOR Dataset
 
 GPU Backend, Hidden Size = 300, Rate = 0.05, Epoch = 200
@@ -768,6 +1007,42 @@ Epoch  160  loss  0.19877741229577542 correct 50 time per epoch 0.28439140319824
 Epoch  170  loss  0.7031467445488125 correct 50 time per epoch 0.2894073724746704
 Epoch  180  loss  0.5757509940183685 correct 50 time per epoch 0.2782928228378296
 Epoch  190  loss  0.15907966791915945 correct 50 time per epoch 0.2850903272628784
+```
+
+GUI (CPU Backend), Hidden Size = 200 (GUI only allows up to 200), Rate = 0.05, Epoch = 200
+
+Time per epoch: 0.198s
+
+Final Image
+
+![XOR Dataset](./.readme/xor_dataset_large.png)
+
+Loss Curve
+
+![Loss Curve](./.readme/xor_loss_large.png)
+
+Training Log
+```bash
+Epoch: 0/200, loss: 11.792249504065133, correct: 31
+Epoch: 10/200, loss: 4.626819330826789, correct: 46
+Epoch: 20/200, loss: 1.1199163389661964, correct: 47
+Epoch: 30/200, loss: 2.044866672035036, correct: 47
+Epoch: 40/200, loss: 1.8990709767254221, correct: 47
+Epoch: 50/200, loss: 2.465598347009125, correct: 47
+Epoch: 60/200, loss: 1.022870077120656, correct: 47
+Epoch: 70/200, loss: 0.7913589724411063, correct: 48
+Epoch: 80/200, loss: 0.5207998303903292, correct: 48
+Epoch: 90/200, loss: 0.8494800570134933, correct: 47
+Epoch: 100/200, loss: 0.35602326130452827, correct: 48
+Epoch: 110/200, loss: 1.5274648544930651, correct: 48
+Epoch: 120/200, loss: 1.1653703102479276, correct: 48
+Epoch: 130/200, loss: 0.4305591706502193, correct: 48
+Epoch: 140/200, loss: 0.1497782286675839, correct: 49
+Epoch: 150/200, loss: 1.3805868347090837, correct: 50
+Epoch: 160/200, loss: 0.616245446410165, correct: 49
+Epoch: 170/200, loss: 1.4969542374185618, correct: 50
+Epoch: 180/200, loss: 0.02753903565206016, correct: 50
+Epoch: 190/200, loss: 0.30856659009827114, correct: 50
 ```
 
 ### Simple Dataset
@@ -822,3 +1097,38 @@ Epoch  180  loss  0.30516572059532066 correct 49 time per epoch 0.29414193630218
 Epoch  190  loss  0.23852372850028958 correct 50 time per epoch 0.294891881942749
 ```
 
+GUI (CPU Backend), Hidden Size = 200 (GUI only allows up to 200), Rate = 0.05, Epoch = 200
+
+Time per epoch: 0.171s
+
+Final Image
+
+![Simple Dataset](./.readme/simple_dataset_large.png)
+
+Loss Curve
+
+![Loss Curve](./.readme/simple_loss_large.png)
+
+Training Log
+```bash
+Epoch: 0/200, loss: 1.8775586304674778, correct: 46
+Epoch: 10/200, loss: 0.8538276509960644, correct: 49
+Epoch: 20/200, loss: 0.3616722032921977, correct: 49
+Epoch: 30/200, loss: 1.2876588499837833, correct: 50
+Epoch: 40/200, loss: 0.414577001949242, correct: 50
+Epoch: 50/200, loss: 2.1702975433350593, correct: 48
+Epoch: 60/200, loss: 1.0749952469856523, correct: 50
+Epoch: 70/200, loss: 0.5086758571779144, correct: 50
+Epoch: 80/200, loss: 0.9011474364251106, correct: 50
+Epoch: 90/200, loss: 0.39661684312065304, correct: 49
+Epoch: 100/200, loss: 1.3223906273890798, correct: 49
+Epoch: 110/200, loss: 0.13150956452102608, correct: 50
+Epoch: 120/200, loss: 0.5893169674649974, correct: 50
+Epoch: 130/200, loss: 0.2665726499079136, correct: 50
+Epoch: 140/200, loss: 0.2633841735348534, correct: 50
+Epoch: 150/200, loss: 0.0865070179638692, correct: 50
+Epoch: 160/200, loss: 0.13692768084606527, correct: 50
+Epoch: 170/200, loss: 0.2230910190496602, correct: 50
+Epoch: 180/200, loss: 0.23085492503130467, correct: 50
+Epoch: 190/200, loss: 0.005218655377797281, correct: 50
+```
